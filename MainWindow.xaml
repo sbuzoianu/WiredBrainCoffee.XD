@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
         <!-- Main menu --> 
         <!-- _View underscore nu este vizibil in UI insa sunt folosite pentru keyboard navigation -->
-       <Menu  FontSize="20">
+        <Menu  Grid.Row="0" Grid.ColumnSpan="2" FontSize="20">
             <MenuItem Header="_View">
                 <MenuItem Header="_Customers"/>
                 <MenuItem Header="_Products"/>
@@ -30,7 +30,7 @@
         </Menu>
 
         <!-- Header -->
-        <StackPanel Background ="#F05a28"  Orientation="Horizontal">
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2"  Background ="#F05a28"  Orientation="Horizontal">
             <Image Source="/Images/logo.png" Width="100" />
             <TextBlock Text="Customers App" FontSize="30" 
                 Foreground="White"/>
@@ -39,7 +39,7 @@
         </StackPanel>
         
         <!-- Customer list -->
-        <StackPanel Background ="#777">
+        <StackPanel Grid.Row="2" Background ="#777">
             <StackPanel Orientation="Horizontal">
                 <Button Margin="10" Width="75">
                     <StackPanel Orientation="Horizontal">
@@ -60,7 +60,7 @@
         </StackPanel>
 
         <!-- Customer detail -->
-        <StackPanel Margin="10">
+        <StackPanel Grid.Row="2" Grid.Column="1" Margin="10">
             <Label>Firstname:</Label>
             <TextBox/>
             <Label>Lastname:</Label>
