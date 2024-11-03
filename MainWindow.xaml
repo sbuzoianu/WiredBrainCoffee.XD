@@ -6,18 +6,71 @@
         xmlns:local="clr-namespace:WiredBrainCoffee"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="BtnAddCustomer"
-                
-                VerticalAlignment = "Top"
-                HorizontalAlignment = "Left"
-                Margin = "10"
-                Click="Button_click">
+    <!-- un  grid cu doua coloane si patru randuri -->
+    <Grid> 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!-- Main menu --> 
+        <!-- _View underscore nu este vizibil in UI insa sunt folosite pentru keyboard navigation -->
+       <Menu  FontSize="20">
+            <MenuItem Header="_View">
+                <MenuItem Header="_Customers"/>
+                <MenuItem Header="_Products"/>
+            </MenuItem>
+        </Menu>
+
+        <!-- Header -->
+        <StackPanel Background ="#F05a28"  Orientation="Horizontal">
+            <Image Source="/Images/logo.png" Width="100" />
+            <TextBlock Text="Customers App" FontSize="30" 
+                Foreground="White"/>
+            <TextBlock Text="Version 1.0" FontSize="16"
+                Foreground="#333333" />
+        </StackPanel>
+        
+        <!-- Customer list -->
+        <StackPanel Background ="#777">
             <StackPanel Orientation="Horizontal">
-                <Image Source="/Images/add.png" Height="18"
-                           Margin="0 0 5 0"/>
-                <TextBlock Text="Add"/>
+                <Button Margin="10" Width="75">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/add.png" Height="18" Margin="0 0 5 0"/>
+                        <TextBlock Text="Add"/>
+                    </StackPanel>
+                </Button>
+                <Button Content="Delete" Width="75" Margin="0 10 10 10" />
+                <Button Margin="0 10 10 10">
+                    <Image Source="/Images/move.png" Height="18"/>
+                </Button>
             </StackPanel>
-        </Button>
+            <ListView Margin="10 0 10 10">
+                <ListViewItem>Julia</ListViewItem>
+                <ListViewItem>Alex</ListViewItem>
+                <ListViewItem>Thomas</ListViewItem>
+            </ListView>
+        </StackPanel>
+
+        <!-- Customer detail -->
+        <StackPanel Margin="10">
+            <Label>Firstname:</Label>
+            <TextBox/>
+            <Label>Lastname:</Label>
+            <TextBox/>
+            <CheckBox Margin="0 10 0 0">
+                Is developer
+            </CheckBox>
+        </StackPanel>
+
+        <StatusBar >
+            <StatusBarItem FontSize="20" Content=" (c) CNCN - XD"/>
+        </StatusBar>
+        
     </Grid>
 </Window>

@@ -18,9 +18,5 @@ namespace WiredBrainCoffee {
             InitializeComponent();
         }
 
-        private void Button_click(object sender, RoutedEventArgs e) {
-            BtnAddCustomer.Content = "User Added!";
-            //MessageBox.Show("User Added!");
-        }
     }
 }
