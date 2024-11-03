@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WiredBrainCoffee"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" 
+        d:DesignWidth="450" d:DesignHeight="800"
+        Height="450" Width="800">
     <!-- un  grid cu doua coloane si patru randuri -->
     <Grid> 
         <Grid.ColumnDefinitions>
@@ -68,8 +70,8 @@
             </CheckBox>
         </StackPanel>
 
-        <StatusBar >
-            <StatusBarItem FontSize="20" Content=" (c) CNCN - XD"/>
+        <StatusBar Grid.Row="3" Grid.ColumnSpan="2">
+            <StatusBarItem FontSize="20" Content=" (c) CNCN - XD 2024"/>
         </StatusBar>
         
     </Grid>
