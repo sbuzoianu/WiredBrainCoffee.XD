@@ -27,7 +27,7 @@ namespace WiredBrainCoffee {
 
             var newColumn = column == 0 ? 2 : 0;
 
-            customerListGrid.SetValue(Grid.ColumnProperty, newColumn);
+            Grid.SetColumn(customerListGrid, newColumn);    
         }
     }
 }
