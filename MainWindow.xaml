@@ -10,7 +10,7 @@
         Title="MainWindow"
         d:DesignWidth="450" d:DesignHeight="800"
         Height="450" Width="800">
-    <!-- un  grid cu doua coloane si patru randuri -->
+    <!-- un  grid cu patru randuri -->
     <Grid>
 
         <Grid.RowDefinitions>
