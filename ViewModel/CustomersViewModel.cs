@@ -11,6 +11,8 @@ namespace WiredBrainCoffee.ViewModel {
         public ObservableCollection<Customer> Customers { get; } = new();
         public ICustomerDataProvider _customerDataProvider { get; }
 
+        public Customer? SelectedCustomer { get; set; }
+
         public async Task LoadAsync() {
             if (Customers.Any()) {
                 return;
